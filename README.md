@@ -20,4 +20,4 @@ Then visit `localhost:8080` on your device. On the main page, you can either fol
 
 ## Authors
 
-This program was written by Jez Godfrey.
+This program was written by Jez Godfrey as part of the 01 Founders fellowship
