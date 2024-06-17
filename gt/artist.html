@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Groupie-Tracker</title>
+    <link rel="stylesheet" href="\stylesheets\styles.css">
+  </head>
+  <body>
+    <div class="head">
+      <a class="home" href="http://localhost:8080/">Home</a>  
+      <h2>{{.Name}}</h2>
+    <form action="/artist" method="post">
+        <p>Type the artist name below and press Submit to go directly to their page!</p>
+        <input id="myInput" type="text" name="myArtist" placeholder="Artist">
+        <input type="submit">
+    </form>
+    </div>
+    <div class="artists">
+      <div class="image">
+        <img src="{{.Image}}" alt="{{.Name}}">
+      </div>
+      <div class="info">
+          <h2>Info</h2>
+          <p><b>Created:</b> {{.CreationDate}}</p>
+          <p><b>Debut Album:</b> {{.FirstAlbum}}</p>
+          <p><b>Members:</b><br>{{range .Members}}{{.}}<br>{{end}}</p>
+      </div>
+      <div class="info">
+        <h2>Concerts</h2>
+        <ul>
+          {{range .Locations}}
+          <li class="list">{{.}}</li>
+          {{end}}
+        </ul>
+      </div>
+      <div class="info">
+        <h2>Dates</h2>
+        <ul>
+          {{range .ConcertDates}}
+          <li>{{range .}}{{.}} | {{end}}</li>
+          {{end}}
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

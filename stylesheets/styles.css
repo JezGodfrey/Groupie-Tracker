@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(133, 255, 249);
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.head {
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    background-color: rgb(12, 48, 48);
+    color: rgb(237, 237, 237);
+    text-align: center;
+}
+
+img {
+    border-radius: 25px;
+}
+
+.aimg:hover {
+    transform: scale(1.1)
+}
+
+.artists {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px 10px;
+}
+
+.artist {
+    text-align: center;
+}
+
+.info {
+    max-width: 300px;
+}
+
+.image {
+    max-width: 400px;
+    padding-right: 1%;
+}
+
+ul {
+    position: relative;
+    left: -25px;
+}
+
+li {
+    margin-top: 10px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Groupie-Tracker</title>
+    <link rel="stylesheet" href="\stylesheets\styles.css">
+  </head>
+  <body>
+    <div class="head">
+    <h2>Groupie Tracker</h2>
+    <form action="/artist" method="post">
+        <p>Type the artist name below and press Submit to go directly to their page!</p>
+        <input id="myInput" type="text" name="myArtist" placeholder="Artist">
+        <input type="submit">
+    </form>
+    </div>
+    <div class="artists">
+      {{range .}}
+          <div class="artist"><a href="/artist/{{.Id}}"><img class="aimg" src="{{.Image}}" alt="{{.Name}}"><p class="aname">{{.Name}}</p></a></div>
+      {{end}}
+    </div>div>
+  </body>
+</html>
